@@ -61,8 +61,8 @@ export function Hero() {
   return (
     <section ref={ref} className="relative overflow-hidden bg-ivory">
       <div className="pattern-bg absolute inset-0 opacity-70 [mask-image:radial-gradient(ellipse_at_70%_40%,black,transparent_70%)]" />
-      <div className="absolute -left-40 top-20 size-[520px] rounded-full bg-mint-100 blur-3xl" />
-      <div className="absolute -right-20 bottom-0 size-[420px] rounded-full bg-sage-200/70 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-20 size-[620px] bg-[radial-gradient(closest-side,var(--color-mint-100),transparent)]" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 size-[520px] bg-[radial-gradient(closest-side,rgb(211_229_217/0.75),transparent)]" />
 
       <div className="container-x relative grid min-h-[calc(100svh-7rem)] items-center gap-12 py-14 lg:grid-cols-[1.05fr_1fr] lg:py-10">
         <motion.div style={{ y: textY, opacity: fade }} className="relative z-10 max-w-xl">
@@ -167,7 +167,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1.3, ease: EASE }}
-            className="absolute bottom-[18%] right-0 z-10 animate-float rounded-2xl bg-ivory/90 px-4 py-3 shadow-[0_20px_50px_-20px_rgba(8,36,26,0.5)] backdrop-blur"
+            className="absolute bottom-[18%] right-0 z-10 animate-float rounded-2xl bg-ivory px-4 py-3 shadow-[0_20px_50px_-20px_rgba(8,36,26,0.5)]"
           >
             <p className="text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-forest-600">
               Just in

@@ -20,7 +20,7 @@ type Store = {
   items: CartItem[];
   count: number;
   subtotal: number;
-  add: (slug: string, opts?: { size?: string; qty?: number }) => void;
+  add: (slug: string, opts?: { size?: string; qty?: number; openCart?: boolean }) => void;
   setQty: (key: string, qty: number) => void;
   remove: (key: string) => void;
   cartOpen: boolean;
@@ -93,7 +93,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       }
       return [...prev, { slug, size: opts?.size, qty }];
     });
-    setCartOpen(true);
+    if (opts?.openCart !== false) setCartOpen(true);
   }, []);
 
   const setQty = useCallback((key: string, qty: number) => {
@@ -144,7 +144,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       {children}
       <div
         aria-live="polite"
-        className="pointer-events-none fixed inset-x-0 bottom-6 z-[80] flex flex-col items-center gap-2 px-4"
+        className="pointer-events-none fixed inset-x-0 bottom-6 z-[120] flex flex-col items-center gap-2 px-4"
       >
         <AnimatePresence>
           {toasts.map((t) => (
