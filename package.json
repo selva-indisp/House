@@ -1,0 +1,23 @@
+{
+  "name": "house",
+  "private": true,
+  "packageManager": "pnpm@12.21.0",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter web --filter bff run dev",
+    "dev:web": "pnpm --filter web dev",
+    "dev:bff": "pnpm --filter bff dev",
+    "build": "pnpm -r run build",
+    "typecheck": "pnpm -r run typecheck",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.2",
+    "typescript": "^6.0.2"
+  }
+}
