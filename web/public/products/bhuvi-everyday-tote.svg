@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000"><defs>
+  <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+    <stop offset="0" stop-color="#FBF4F0"/>
+    <stop offset="1" stop-color="#EEDDD4"/>
+  </radialGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FBEFC4"/>
+    <stop offset=".35" stop-color="#E2C26E"/>
+    <stop offset=".7" stop-color="#B8913A"/>
+    <stop offset="1" stop-color="#7E5E1F"/>
+  </linearGradient>
+  <radialGradient id="goldBall" cx="35%" cy="30%" r="70%">
+    <stop offset="0" stop-color="#FFF6D6"/>
+    <stop offset=".45" stop-color="#E2C26E"/>
+    <stop offset="1" stop-color="#7E5E1F"/>
+  </radialGradient>
+  <radialGradient id="pearl" cx="35%" cy="30%" r="70%">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset=".6" stop-color="#F1ECE2"/>
+    <stop offset="1" stop-color="#C9BFAE"/>
+  </radialGradient>
+  <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#1D3A2C" stop-opacity=".28"/>
+    <stop offset="1" stop-color="#1D3A2C" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#173326" flood-opacity=".22"/>
+  </filter><linearGradient id="fBase" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#C9DCC8"/>
+    <stop offset="1" stop-color="#8FB096"/>
+  </linearGradient>
+  <pattern id="fMotif" width="56" height="56" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="6" height="56" fill="#FFFFFF" opacity=".22"/><rect x="28" y="0" width="2" height="56" fill="#FFFFFF" opacity=".3"/></pattern>
+  <linearGradient id="fShade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity=".22"/>
+    <stop offset=".25" stop-color="#000" stop-opacity="0"/>
+    <stop offset=".7" stop-color="#fff" stop-opacity=".08"/>
+    <stop offset="1" stop-color="#000" stop-opacity=".25"/>
+  </linearGradient></defs><rect width="800" height="1000" fill="url(#bg)"/>
+  <path d="M150 1000 V360 A250 250 0 0 1 650 360 V1000Z" fill="#fff" opacity=".42"/><path d="M170 1000 V362 A230 230 0 0 1 630 362 V1000" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
+  <ellipse cx="400" cy="900" rx="260" ry="34" fill="url(#shadow)"/><path d="M300 420 C300 220 500 220 500 420" fill="none" stroke="#8FB096" stroke-width="22" stroke-linecap="round"/>
+      <path d="M300 420 C300 220 500 220 500 420" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6 8" opacity=".7"/>
+      <g filter="url(#soft)">
+      <path d="M210 410 L590 410 L640 860 Q640 880 620 880 L180 880 Q160 880 160 860Z" fill="url(#fBase)" /><path d="M210 410 L590 410 L640 860 Q640 880 620 880 L180 880 Q160 880 160 860Z" fill="url(#fMotif)"/><path d="M210 410 L590 410 L640 860 Q640 880 620 880 L180 880 Q160 880 160 860Z" fill="url(#fShade)"/>
+      <path d="M215 430 L585 430 M175 860 L625 860" stroke="#fff" stroke-width="2" stroke-dasharray="7 7" opacity=".7"/>
+      <rect x="320" y="560" width="160" height="110" rx="10" fill="#FFFFFF" opacity=".9"/>
+      <text x="400" y="628" text-anchor="middle" font-family="Georgia, serif" font-size="44" font-style="italic" fill="#C9DCC8">AB</text>
+      </g>
+      <g transform="translate(560 430)"><path d="M0 0 L0 50" stroke="url(#gold)" stroke-width="3"/><circle cy="62" r="13" fill="url(#gold)"/></g></svg>
