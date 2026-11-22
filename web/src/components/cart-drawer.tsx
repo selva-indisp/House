@@ -31,7 +31,7 @@ export function CartDrawer() {
           <motion.button
             type="button"
             aria-label="Close bag"
-            className="fixed inset-0 z-[60] cursor-default bg-forest-950/40 backdrop-blur-[3px]"
+            className="fixed inset-0 z-[60] cursor-default bg-forest-950/50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

@@ -9,6 +9,7 @@ import {
   Testimonials,
   WordMarquee,
 } from '@/components/home/sections';
+import { ReelsRail } from '@/components/reels/reels-rail';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <WordMarquee />
       <CategoryTrio />
+      <ReelsRail />
       <CraftedTabs />
       <EditBanner />
       <NewArrivals />

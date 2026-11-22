@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatePresence, LayoutGroup, motion, useScroll, useTransform } from 'motion/react';
+import { AnimatePresence, LayoutGroup, motion, useMotionValueEvent, useScroll } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
@@ -335,7 +335,6 @@ export function NewArrivals() {
       <div
         ref={rail}
         onScroll={update}
-        data-lenis-prevent-wheel
         className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-5 pb-4 md:px-[max(2.5rem,calc((100vw-1320px)/2+2.5rem))]"
       >
         {list.map((p, i) => (
@@ -362,26 +361,13 @@ const STORY =
 
 const STORY_WORDS = STORY.split(' ').map((text, n) => ({ text, id: `${n}-${text}` }));
 
-function LitWord({
-  word,
-  range,
-  progress,
-}: {
-  word: string;
-  range: [number, number];
-  progress: ReturnType<typeof useScroll>['scrollYProgress'];
-}) {
-  const opacity = useTransform(progress, range, [0.14, 1]);
-  return (
-    <motion.span style={{ opacity }} className="inline-block">
-      {word}&nbsp;
-    </motion.span>
-  );
-}
-
 export function Story() {
   const ref = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 85%', 'end 45%'] });
+  // One CSS variable drives every word's opacity, instead of one animated value per word.
+  useMotionValueEvent(scrollYProgress, 'change', (v) => {
+    ref.current?.style.setProperty('--lit', String(v * STORY_WORDS.length));
+  });
   return (
     <section id="story" className="relative scroll-mt-24 overflow-hidden bg-ivory py-28 sm:py-40">
       <div className="pattern-bg pointer-events-none absolute inset-0 opacity-40 [mask-image:linear-gradient(to_bottom,transparent,black_30%,black_70%,transparent)]" />
@@ -412,12 +398,13 @@ export function Story() {
             className="mt-6 font-display text-[2rem] leading-[1.25] text-forest-900 sm:text-[2.6rem]"
           >
             {STORY_WORDS.map((w, i) => (
-              <LitWord
+              <span
                 key={w.id}
-                word={w.text}
-                progress={scrollYProgress}
-                range={[i / STORY_WORDS.length, (i + 1) / STORY_WORDS.length]}
-              />
+                className="inline-block"
+                style={{ opacity: `clamp(0.14, calc(var(--lit, 0) - ${i}), 1)` }}
+              >
+                {w.text}&nbsp;
+              </span>
             ))}
           </p>
         </div>
@@ -543,9 +530,9 @@ export function Testimonials() {
             <AnimatePresence mode="wait">
               <motion.figure
                 key={i}
-                initial={{ opacity: 0, y: 24, filter: 'blur(6px)' }}
-                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, y: -16, filter: 'blur(6px)' }}
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.7, ease: EASE }}
               >
                 <blockquote className="font-display text-3xl leading-snug text-forest-900 sm:text-4xl">

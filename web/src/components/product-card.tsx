@@ -41,7 +41,7 @@ export function WishButton({ slug, className = '' }: { slug: string; className?:
       }}
       aria-pressed={on}
       aria-label={on ? 'Remove from wishlist' : 'Add to wishlist'}
-      className={`grid size-10 place-items-center rounded-full bg-ivory/90 text-forest-900 shadow-sm backdrop-blur transition-colors hover:bg-ivory ${className}`}
+      className={`grid size-10 place-items-center rounded-full bg-ivory/95 text-forest-900 shadow-sm transition-colors hover:bg-ivory ${className}`}
     >
       <AnimatePresence mode="wait" initial={false}>
         <motion.span
@@ -116,7 +116,7 @@ export function ProductCard({
           <Link
             href={`/product/${product.slug}`}
             tabIndex={-1}
-            className="absolute inset-x-3 bottom-3 hidden translate-y-4 items-center justify-center gap-2 rounded-full bg-ivory/95 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-forest-900 opacity-0 shadow-lg backdrop-blur transition-all duration-500 ease-silk group-hover:translate-y-0 group-hover:opacity-100 md:flex"
+            className="absolute inset-x-3 bottom-3 hidden translate-y-4 items-center justify-center gap-2 rounded-full bg-ivory/95 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-forest-900 opacity-0 shadow-lg transition-all duration-500 ease-silk group-hover:translate-y-0 group-hover:opacity-100 md:flex"
           >
             Choose size
           </Link>
@@ -124,7 +124,7 @@ export function ProductCard({
           <button
             type="button"
             onClick={() => add(product.slug)}
-            className="absolute inset-x-3 bottom-3 hidden translate-y-4 items-center justify-center gap-2 rounded-full bg-forest-900/95 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ivory opacity-0 shadow-lg backdrop-blur transition-all duration-500 ease-silk hover:bg-forest-700 focus-visible:translate-y-0 focus-visible:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:flex"
+            className="absolute inset-x-3 bottom-3 hidden translate-y-4 items-center justify-center gap-2 rounded-full bg-forest-900/95 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ivory opacity-0 shadow-lg transition-all duration-500 ease-silk hover:bg-forest-700 focus-visible:translate-y-0 focus-visible:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:flex"
           >
             <BagIcon size={15} /> Add to bag
           </button>

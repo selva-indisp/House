@@ -20,6 +20,7 @@ const ANNOUNCEMENTS = [
 const NAV = [
   { href: '/shop', label: 'Shop all' },
   ...categories.map((c) => ({ href: `/shop/${c.slug}`, label: c.name })),
+  { href: '/reels', label: '6 PM Reels' },
   { href: '/#story', label: 'Our story' },
 ];
 
@@ -87,9 +88,7 @@ export function Header() {
         animate={{ y: hidden ? '-100%' : '0%' }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className={`sticky top-0 z-50 transition-[background-color,box-shadow] duration-500 ${
-          scrolled
-            ? 'bg-ivory/85 shadow-[0_10px_30px_-20px_rgba(8,36,26,0.4)] backdrop-blur-xl'
-            : 'bg-ivory'
+          scrolled ? 'bg-ivory/[0.97] shadow-[0_10px_30px_-20px_rgba(8,36,26,0.4)]' : 'bg-ivory'
         }`}
       >
         <div
@@ -106,13 +105,13 @@ export function Header() {
             >
               <MenuIcon size={22} />
             </button>
-            <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
+            <nav aria-label="Primary" className="hidden items-center gap-5 lg:flex xl:gap-7">
               {NAV.slice(0, 4).map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   aria-current={pathname === item.href ? 'page' : undefined}
-                  className="link-draw text-[0.78rem] font-semibold uppercase tracking-[0.2em] text-forest-900"
+                  className="link-draw whitespace-nowrap text-[0.78rem] font-semibold uppercase tracking-[0.2em] text-forest-900"
                 >
                   {item.label}
                 </Link>
@@ -124,8 +123,19 @@ export function Header() {
 
           <div className="flex items-center justify-end gap-1 sm:gap-3">
             <Link
+              href="/reels"
+              aria-current={pathname === '/reels' ? 'page' : undefined}
+              className="link-draw mr-3 hidden items-center gap-2 whitespace-nowrap text-[0.78rem] font-semibold uppercase tracking-[0.2em] text-forest-900 lg:inline-flex"
+            >
+              <span className="relative flex size-1.5">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-gold opacity-70" />
+                <span className="relative inline-flex size-1.5 rounded-full bg-gold" />
+              </span>
+              Reels
+            </Link>
+            <Link
               href="/#story"
-              className="link-draw mr-4 hidden text-[0.78rem] font-semibold uppercase tracking-[0.2em] text-forest-900 lg:inline"
+              className="link-draw mr-4 hidden whitespace-nowrap text-[0.78rem] font-semibold uppercase tracking-[0.2em] text-forest-900 xl:inline"
             >
               Our story
             </Link>

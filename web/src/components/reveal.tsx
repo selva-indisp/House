@@ -39,7 +39,7 @@ export function SplitHeading({
   immediate = false,
 }: {
   text: string;
-  as?: 'h1' | 'h2' | 'h3' | 'p';
+  as?: 'h1' | 'h2' | 'h3' | 'p' | 'span';
   className?: string;
   delay?: number;
   immediate?: boolean;
@@ -59,7 +59,7 @@ export function SplitHeading({
           className="inline-block overflow-hidden pb-[0.12em] align-bottom"
         >
           <motion.span
-            className="inline-block will-change-transform"
+            className="inline-block"
             variants={{
               hidden: { y: '110%', rotate: 4 },
               show: {
