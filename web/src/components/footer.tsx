@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { categories } from '@/lib/products';
+import { Logo } from './logo';
 import { Newsletter } from './newsletter';
 
 const HELP = [
@@ -16,6 +17,7 @@ export function Footer() {
       <div className="pattern-bg pointer-events-none absolute inset-0 opacity-[0.08] invert" />
       <div className="container-x relative grid gap-14 py-20 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
+          <Logo tone="light" className="mb-10" />
           <p className="eyebrow !text-gold">Letters, with love</p>
           <h2 className="mt-4 max-w-sm font-display text-4xl leading-tight">
             New drops, styling notes and little surprises.
@@ -71,7 +73,7 @@ export function Footer() {
       <div className="relative border-t border-ivory/10">
         <p
           aria-hidden="true"
-          className="select-none whitespace-nowrap text-center font-display text-[17vw] leading-[0.85] tracking-tight text-ivory/[0.06]"
+          className="select-none whitespace-nowrap text-center font-luxe text-[13vw] font-bold uppercase leading-[0.95] tracking-[0.06em] text-ivory/[0.05]"
         >
           House of AB
         </p>

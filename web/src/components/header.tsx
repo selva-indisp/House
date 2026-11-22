@@ -120,7 +120,7 @@ export function Header() {
             </nav>
           </div>
 
-          <Logo />
+          <Logo compact={scrolled} />
 
           <div className="flex items-center justify-end gap-1 sm:gap-3">
             <Link

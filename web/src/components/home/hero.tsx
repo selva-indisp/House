@@ -32,7 +32,7 @@ function Arch({
         <Link
           href={`/product/${slug}`}
           aria-label="View product"
-          className="group block h-full w-full"
+          className="group relative block h-full w-full"
         >
           <Image
             src={productImage(slug)}

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, Manrope } from 'next/font/google';
+import { Bodoni_Moda, Cormorant_Garamond, Manrope } from 'next/font/google';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Providers } from '@/components/providers';
@@ -9,6 +9,13 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
   subsets: ['latin'],
   weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+});
+
+const bodoni = Bodoni_Moda({
+  variable: '--font-bodoni',
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
   style: ['normal', 'italic'],
 });
 
@@ -32,7 +39,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${manrope.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${cormorant.variable} ${bodoni.variable} ${manrope.variable} antialiased`}
+    >
       <body className="min-h-dvh">
         <Providers>
           <Header />
