@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000"><defs>
+  <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+    <stop offset="0" stop-color="#FBF4F0"/>
+    <stop offset="1" stop-color="#EEDDD4"/>
+  </radialGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FBEFC4"/>
+    <stop offset=".35" stop-color="#E2C26E"/>
+    <stop offset=".7" stop-color="#B8913A"/>
+    <stop offset="1" stop-color="#7E5E1F"/>
+  </linearGradient>
+  <radialGradient id="goldBall" cx="35%" cy="30%" r="70%">
+    <stop offset="0" stop-color="#FFF6D6"/>
+    <stop offset=".45" stop-color="#E2C26E"/>
+    <stop offset="1" stop-color="#7E5E1F"/>
+  </radialGradient>
+  <radialGradient id="pearl" cx="35%" cy="30%" r="70%">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset=".6" stop-color="#F1ECE2"/>
+    <stop offset="1" stop-color="#C9BFAE"/>
+  </radialGradient>
+  <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#1D3A2C" stop-opacity=".28"/>
+    <stop offset="1" stop-color="#1D3A2C" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#173326" flood-opacity=".22"/>
+  </filter><radialGradient id="gem" cx="35%" cy="30%" r="75%">
+    <stop offset="0" stop-color="#8FE3B9"/>
+    <stop offset=".55" stop-color="#1E8A5A"/>
+    <stop offset="1" stop-color="#0B3D27"/>
+  </radialGradient></defs><rect width="800" height="1000" fill="url(#bg)"/>
+  <path d="M150 1000 V360 A250 250 0 0 1 650 360 V1000Z" fill="#fff" opacity=".42"/><path d="M170 1000 V362 A230 230 0 0 1 630 362 V1000" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
+  <ellipse cx="400" cy="900" rx="260" ry="34" fill="url(#shadow)"/><g filter="url(#soft)">
+      <ellipse cx="400" cy="640" rx="150" ry="170" fill="none" stroke="#7E5E1F" stroke-width="30"/>
+      <ellipse cx="400" cy="640" rx="150" ry="170" fill="none" stroke="url(#gold)" stroke-width="24"/>
+      <path d="M330 470 L470 470 L440 520 L360 520Z" fill="url(#gold)"/>
+      <g transform="translate(400 420)">
+        <path d="M-70 0 L-40 -55 L40 -55 L70 0 L0 80Z" fill="url(#gem)"/>
+        <path d="M-70 0 L70 0 M-40 -55 L-20 0 L0 80 L20 0 L40 -55 M-20 0 L0 -55 L20 0" stroke="#fff" stroke-opacity=".35" stroke-width="2" fill="none"/>
+        <circle cx="-60" cy="-28" r="6" fill="url(#gold)"/><circle cx="-30" cy="-34" r="6" fill="url(#gold)"/><circle cx="30" cy="-34" r="6" fill="url(#gold)"/><circle cx="60" cy="-28" r="6" fill="url(#gold)"/>
+      </g>
+      <circle cx="308" cy="480" r="12" fill="#fff" opacity=".9"/><circle cx="288" cy="500" r="9" fill="#fff" opacity=".85"/><circle cx="492" cy="480" r="12" fill="#fff" opacity=".9"/><circle cx="512" cy="500" r="9" fill="#fff" opacity=".85"/>
+    </g><path d="M500 338 Q500 360 522 360 Q500 360 500 382 Q500 360 478 360 Q500 360 500 338Z" fill="#fff" opacity="0.9"/><path d="M300 388 Q300 400 312 400 Q300 400 300 412 Q300 400 288 400 Q300 400 300 388Z" fill="#fff" opacity="0.9"/><path d="M560 551 Q560 560 569 560 Q560 560 560 569 Q560 560 551 560 Q560 560 560 551Z" fill="#fff" opacity="0.7"/></svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000"><defs>
+  <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+    <stop offset="0" stop-color="#EEF3EC"/>
+    <stop offset="1" stop-color="#D2DFD0"/>
+  </radialGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FBEFC4"/>
+    <stop offset=".35" stop-color="#E2C26E"/>
+    <stop offset=".7" stop-color="#B8913A"/>
+    <stop offset="1" stop-color="#7E5E1F"/>
+  </linearGradient>
+  <radialGradient id="goldBall" cx="35%" cy="30%" r="70%">
+    <stop offset="0" stop-color="#FFF6D6"/>
+    <stop offset=".45" stop-color="#E2C26E"/>
+    <stop offset="1" stop-color="#7E5E1F"/>
+  </radialGradient>
+  <radialGradient id="pearl" cx="35%" cy="30%" r="70%">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset=".6" stop-color="#F1ECE2"/>
+    <stop offset="1" stop-color="#C9BFAE"/>
+  </radialGradient>
+  <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#1D3A2C" stop-opacity=".28"/>
+    <stop offset="1" stop-color="#1D3A2C" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#173326" flood-opacity=".22"/>
+  </filter><linearGradient id="velvet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4EFE4"/><stop offset="1" stop-color="#CFC4AE"/>
+    </linearGradient>
+    <radialGradient id="velvetHi" cx="45%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gem" cx="35%" cy="30%" r="75%">
+    <stop offset="0" stop-color="#8FE3B9"/>
+    <stop offset=".55" stop-color="#1E8A5A"/>
+    <stop offset="1" stop-color="#0B3D27"/>
+  </radialGradient></defs><rect width="800" height="1000" fill="url(#bg)"/><g transform="translate(400 500) scale(1.8) translate(-400 -380)"><rect width="800" height="1000" fill="url(#bg)"/>
+  <path d="M150 1000 V360 A250 250 0 0 1 650 360 V1000Z" fill="#fff" opacity=".42"/><path d="M170 1000 V362 A230 230 0 0 1 630 362 V1000" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
+  <ellipse cx="400" cy="900" rx="260" ry="34" fill="url(#shadow)"/><g filter="url(#soft)"><path d="M330 110 L470 110 L470 380 C520 420 690 455 735 610 L770 1000 L30 1000 L65 610 C110 455 280 420 330 380 Z" fill="url(#velvet)"/><path d="M330 110 L470 110 L470 380 C520 420 690 455 735 610 L770 1000 L30 1000 L65 610 C110 455 280 420 330 380 Z" fill="url(#velvetHi)"/></g>
+  <path d="M330 380 C360 400 440 400 470 380" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="3"/>
+      <path d="M326 300 Q400 470 474 300" fill="none" stroke="url(#gold)" stroke-width="38" stroke-linecap="round" opacity=".95"/>
+      <rect x="315" y="289" width="22" height="22" rx="4" transform="rotate(45 326 300)" fill="#fff" opacity="0.85"/><rect x="327.3" y="315" width="22" height="22" rx="4" transform="rotate(45 338.3 326)" fill="url(#gem)" opacity="1"/><rect x="339.7" y="336.2" width="22" height="22" rx="4" transform="rotate(45 350.7 347.2)" fill="#fff" opacity="0.85"/><rect x="352" y="352.8" width="22" height="22" rx="4" transform="rotate(45 363 363.8)" fill="url(#gem)" opacity="1"/><rect x="364.3" y="364.6" width="22" height="22" rx="4" transform="rotate(45 375.3 375.6)" fill="#fff" opacity="0.85"/><rect x="376.7" y="371.6" width="22" height="22" rx="4" transform="rotate(45 387.7 382.6)" fill="url(#gem)" opacity="1"/><rect x="389" y="374" width="22" height="22" rx="4" transform="rotate(45 400 385)" fill="#fff" opacity="0.85"/><rect x="401.3" y="371.6" width="22" height="22" rx="4" transform="rotate(45 412.3 382.6)" fill="url(#gem)" opacity="1"/><rect x="413.7" y="364.6" width="22" height="22" rx="4" transform="rotate(45 424.7 375.6)" fill="#fff" opacity="0.85"/><rect x="426" y="352.8" width="22" height="22" rx="4" transform="rotate(45 437 363.8)" fill="url(#gem)" opacity="1"/><rect x="438.3" y="336.2" width="22" height="22" rx="4" transform="rotate(45 449.3 347.2)" fill="#fff" opacity="0.85"/><rect x="450.7" y="315" width="22" height="22" rx="4" transform="rotate(45 461.7 326)" fill="url(#gem)" opacity="1"/><rect x="463" y="289" width="22" height="22" rx="4" transform="rotate(45 474 300)" fill="#fff" opacity="0.85"/>
+      <line x1="338.3" y1="344" x2="338.3" y2="370" stroke="url(#gold)" stroke-width="2"/><circle cx="338.3" cy="376" r="7" fill="url(#pearl)"/><line x1="350.7" y1="365.2" x2="350.7" y2="391.2" stroke="url(#gold)" stroke-width="2"/><circle cx="350.7" cy="397.2" r="7" fill="url(#pearl)"/><line x1="363" y1="381.8" x2="363" y2="407.8" stroke="url(#gold)" stroke-width="2"/><circle cx="363" cy="413.8" r="7" fill="url(#pearl)"/><line x1="375.3" y1="393.6" x2="375.3" y2="419.6" stroke="url(#gold)" stroke-width="2"/><circle cx="375.3" cy="425.6" r="7" fill="url(#pearl)"/><line x1="387.7" y1="400.6" x2="387.7" y2="426.6" stroke="url(#gold)" stroke-width="2"/><circle cx="387.7" cy="432.6" r="7" fill="url(#pearl)"/><line x1="400" y1="403" x2="400" y2="429" stroke="url(#gold)" stroke-width="2"/><circle cx="400" cy="435" r="7" fill="url(#pearl)"/><line x1="412.3" y1="400.6" x2="412.3" y2="426.6" stroke="url(#gold)" stroke-width="2"/><circle cx="412.3" cy="432.6" r="7" fill="url(#pearl)"/><line x1="424.7" y1="393.6" x2="424.7" y2="419.6" stroke="url(#gold)" stroke-width="2"/><circle cx="424.7" cy="425.6" r="7" fill="url(#pearl)"/><line x1="437" y1="381.8" x2="437" y2="407.8" stroke="url(#gold)" stroke-width="2"/><circle cx="437" cy="413.8" r="7" fill="url(#pearl)"/><line x1="449.3" y1="365.2" x2="449.3" y2="391.2" stroke="url(#gold)" stroke-width="2"/><circle cx="449.3" cy="397.2" r="7" fill="url(#pearl)"/><line x1="461.7" y1="344" x2="461.7" y2="370" stroke="url(#gold)" stroke-width="2"/><circle cx="461.7" cy="376" r="7" fill="url(#pearl)"/>
+      <path d="M450 316 Q450 330 464 330 Q450 330 450 344 Q450 330 436 330 Q450 330 450 316Z" fill="#fff" opacity="0.9"/><path d="M350 351 Q350 360 359 360 Q350 360 350 369 Q350 360 341 360 Q350 360 350 351Z" fill="#fff" opacity="0.9"/></g></svg>
