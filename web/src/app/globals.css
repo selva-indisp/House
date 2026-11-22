@@ -22,6 +22,7 @@
 
   --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-luxe: var(--font-bodoni), "Bodoni Moda", Didot, "Bodoni 72", serif;
 
   --ease-silk: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-swift: cubic-bezier(0.65, 0, 0.35, 1);
@@ -166,6 +167,47 @@
   .link-draw:hover,
   .link-draw[aria-current="page"] {
     background-size: 100% 1px;
+  }
+
+  /* Wordmark: deep emerald ink with a gold-foil sheen that sweeps across on hover. */
+  .logo-wordmark {
+    background-image: linear-gradient(
+      100deg,
+      var(--color-forest-900) 0%,
+      var(--color-forest-900) 40%,
+      #e7c56f 48%,
+      #fff3c9 50%,
+      #b98b2e 53%,
+      var(--color-forest-900) 61%,
+      var(--color-forest-900) 100%
+    );
+    background-size: 260% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 1.4s var(--ease-silk);
+  }
+  .logo-wordmark-light {
+    background-image: linear-gradient(
+      100deg,
+      #fdfcf7 0%,
+      #fdfcf7 40%,
+      #e7c56f 48%,
+      #fff3c9 50%,
+      #b98b2e 53%,
+      #fdfcf7 61%,
+      #fdfcf7 100%
+    );
+  }
+  .group:hover .logo-wordmark {
+    background-position: 0% 0;
+  }
+  .logo-of {
+    background-image: linear-gradient(180deg, #f2d88e, #b98b2e 60%, #8a6420);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .pattern-bg {

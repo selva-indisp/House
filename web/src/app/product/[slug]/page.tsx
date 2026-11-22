@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
 import { ProductCard } from '@/components/product-card';
 import { ProductDetail } from '@/components/product-detail';
 import { Reveal, SplitHeading } from '@/components/reveal';
@@ -16,8 +17,19 @@ export async function generateMetadata({
   return p ? { title: p.name, description: p.short } : {};
 }
 
-export default async function ProductPage({ params }: PageProps<'/product/[slug]'>) {
-  const product = getProduct((await params).slug);
+export default function ProductPage({ params }: PageProps<'/product/[slug]'>) {
+  // Every product is prerendered via generateStaticParams, so this boundary never shows in practice.
+  return (
+    <Suspense fallback={<div className="min-h-[80vh]" />}>
+      {params.then(({ slug }) => (
+        <ProductContent slug={slug} />
+      ))}
+    </Suspense>
+  );
+}
+
+function ProductContent({ slug }: { slug: string }) {
+  const product = getProduct(slug);
   if (!product) notFound();
 
   return (
